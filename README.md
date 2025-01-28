@@ -17,9 +17,9 @@ However, I’m very open to feedback, suggestions, and contributions! If you fin
 ---
 
 ## How to Use
-1. Run PowerShell as an administrator.
-2. Ensure that Chocolatey is installed on your system.
-3. Execute the script and select an option from the menu.
+1. Ensure that Chocolatey is installed on your system.
+2. Ensure that the "Chocolatey-App-Installer" folder is at the **Downloads** folder.
+3. Execute the **run.bat** and select an option from the menu.
 
 ---
 

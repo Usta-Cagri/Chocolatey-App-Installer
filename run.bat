@@ -10,4 +10,3 @@ if defined OneDrive (
 :: Dosyayı çalıştır
 powershell -Command "Start-Process powershell -ArgumentList '-NoProfile -ExecutionPolicy Bypass -File \"%downloadsPath%\Chocolatey-App-Installer\Chocolatey-App-Installer.ps1\"' -Verb RunAs"
 pause
-

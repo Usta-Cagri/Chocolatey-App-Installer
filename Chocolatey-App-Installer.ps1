@@ -38,7 +38,7 @@ if ($choice -eq "1") {
 } elseif ($choice -eq "2") {
     Update-All 
 } elseif ($choice -eq "3") {
-    Install-SingleApp
+    Install-ChocoApp
 } else {
     Write-Output "Invalid choice. Please restart the script and choose a valid option."
 }

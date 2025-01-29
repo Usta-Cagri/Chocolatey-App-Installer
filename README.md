@@ -18,8 +18,10 @@ However, I’m very open to feedback, suggestions, and contributions! If you fin
 
 ## How to Use
 1. Ensure that Chocolatey is installed on your system.
-2. Ensure that the "Chocolatey-App-Installer" folder is at the **Downloads** folder.
-3. Execute the **run.bat** and select an option from the menu.
+2. Open an elevated Powershell window.
+3. Run the code "Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass".
+4. Go to the location of **.ps1** file and run ".\Chocolatey-App-Installer.ps1" command.
+5. Choose a number and follow the instructions.
 
 ---
 

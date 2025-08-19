@@ -22,6 +22,9 @@ However, I’m very open to feedback, suggestions, and contributions! If you fin
 3. Run the code "Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass".
 4. Go to the location of **.ps1** file and run ".\Chocolatey-App-Installer.ps1" command.
 5. Choose a number and follow the instructions.
+6. Or you can easily type: 
+```irm https://raw.githubusercontent.com/Usta-Cagri/Chocolatey-App-Installer/main/installer.ps1 | iex ```
+on an elevated powershell window if you've installed chocolatey package manager but soon this script will automate that. (This is the recommended way because it doesn't install anything to your disk and if you have a bit of terminal knowledge you can add this to you $PROFILE folder) 
 
 ---
 

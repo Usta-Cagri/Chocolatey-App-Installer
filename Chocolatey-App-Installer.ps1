@@ -7,9 +7,10 @@ if (choco -match "Chocolatey") {
 #Options:
 Write-Output "Please Choose One of the Options:"
 Write-Output "1: Install the Recommended Apps"
-Write-Output "2: Update All Chocolatey Apps "
-Write-Output "3: Install an App(whatever you want)"
-$choice = Read-Host "Please Choose One of the Options: 1/2/3"
+Write-Output "2: Install Gaming Stuff"
+Write-Output "3: Update All Chocolatey Apps "
+Write-Output "4: Install an App(whatever you want)"
+$choice = Read-Host "Please Choose One of the Options: 1/2/3/4"
 
 #Functions:
 function Install-RecommendedApps {
@@ -42,8 +43,10 @@ if ($choice -eq "1") {
     $PredefinedApps = @("vscode", "Onlyoffice", "Firefox")
     Install-RecommendedApps -AppList $PredefinedApps
 } elseif ($choice -eq "2") {
-    Update-ChocoApps 
+    $PredefinedApps ? @("steam", "ea-app", "ubisoft-connect", "heroic-games-launcher", "msiafterburner",)
 } elseif ($choice -eq "3") {
+    Update-ChocoApps 
+} elseif ($choice -eq "4") {
     Install-ChocoApp
 } else {
     Write-Output "Invalid choice. Please restart the script and choose a valid option."

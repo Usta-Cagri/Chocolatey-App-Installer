@@ -43,7 +43,7 @@ if ($choice -eq "1") {
     $PredefinedApps = ("vscode", "Onlyoffice", "Firefox")
     Install-RecommendedApps -AppList $PredefinedApps
 } elseif ($choice -eq "2") {
-    $PredefinedApps = @("steam", "ea-app", "ubisoft-connect", "heroic-games-launcher", "msiafterburner",)
+    $PredefinedApps = @("steam", "ea-app", "ubisoft-connect", "heroic-games-launcher", "msiafterburner")
 } elseif ($choice -eq "3") {
     Update-ChocoApps 
 } elseif ($choice -eq "4") {

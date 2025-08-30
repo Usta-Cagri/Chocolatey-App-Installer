@@ -1,9 +1,3 @@
-#Chocolatey Check
-$choco = choco 2>null
-if (choco -match "Chocolatey") {
-	Write-Output "Chocolatey Package Manager is detected!"
-
-
 #Options:
 Write-Output "Please Choose One of the Options:"
 Write-Output "1: Install the Recommended Apps(You will be seeing them before installing if you choose this!)"
@@ -60,34 +54,4 @@ if ($choice -eq "1") {
     Install-ChocoApp
 } else {
     Write-Output "Invalid choice. Please restart the script and choose a valid option."
-}
-}
-
-else {
-
-#Chocolatey Package Manager Installation:
-$defaultexecutionpolicy = Get-ExecutionPolicy
-Write-Output "Chocolatey Package Manager is installing..."
-Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
-
-if ((choco) -match "Chocolatey") {
-	Write-Output "Chocolatey Package Manager is succesfully installed!"
-	Write-Output "Please re-run the script if you want it to work!"
-}
-
-else {
-	Write-Output "Chocolatey is not installed because of an error😢(exiting...)"
-	exit
-}
-
-Set-ExecutionPolicy $defaultexecutionpolicy -Scope LocalMachine
-$defaultnewexecutionpolicy = Get-ExecutionPolicy
-
-if ($defaultnewexecutionpolicy -eq $defaultexecutionpolicy) {
-	Write-Output "Your Execution Policy before the installation hasn't changed!"
-}
-
-else {
-	Write-Output "Your Execution Policy might be have changed and it can cause some security problems!"
-}
 }

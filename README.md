@@ -3,8 +3,9 @@
 This PowerShell script is designed to simplify application management using Chocolatey.  
 With this script, you can:
 1. Install a predefined list of recommended applications.
-2. Update all Chocolatey-installed applications.
-3. Install a single application based on user input.
+2. Install a predefined list of gaming stuff.
+3. Update all Chocolatey-installed applications.
+4. Install a single application based on user input.
 
 ---
 
@@ -30,6 +31,7 @@ on an elevated powershell window if you've installed chocolatey package manager 
 
 ## Features
 - **Install recommended apps:** Downloads a predefined list of applications in bulk.
+- **Install Gaming Stuff** Downloads a predefined list of gaming stuff in bulk.
 - **Update all applications:** Keeps all your installed apps up-to-date.
 - **Install a single app:** Allows the user to specify an app for installation.
 
@@ -53,3 +55,8 @@ Thank you for checking out my project! 💙
 
 ## License
 This project is licensed under the MIT License. Feel free to use, modify, and distribute it.
+
+---
+
+## Inspiration
+This project is heavily inspired by [CTT's winutil](https://github.com/ChrisTitusTech/winutil)

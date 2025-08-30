@@ -43,7 +43,7 @@ function Install-ChocoApp {
 #Logic to call functions based on user's choice::
 if ($choice -eq "1") {
     # Predefined apps to install (you can modify this list as needed)
-    $PredefinedApps = @("vscode", "Onlyoffice", "Firefox")
+    $PredefinedApps = @("vscodium", "Onlyoffice", "Firefox")
     Install-RecommendedApps -AppList $PredefinedApps
 } elseif ($choice -eq "2") {
     $PredefinedGameApps = @("steam", "ea-app", "ubisoft-connect", "heroic-games-launcher", "msiafterburner")

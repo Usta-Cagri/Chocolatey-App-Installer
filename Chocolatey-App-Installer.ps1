@@ -21,8 +21,19 @@ function Install-RecommendedApps {
  }
     else {
         Write-Host "Apps are not going to be installed!(if you didn't meant to do this it is an error else it is not an error!)"
-        & $PSCommandPath
-        exit
+        $scriptPath = $PSCommandPath
+
+        if (Get-Command pwsh -ErrorAction SilentlyContinue) {
+        # PowerShell 7
+            Start-Process pwsh -ArgumentList "-File `"$scriptPath`""
+      } 
+        else {
+        # PowerShell 5.1
+            Start-Process powershell -ArgumentList "-File `"$scriptPath`""
+    }
+
+    # Stop Current Procces 
+    Stop-Process -Id $PID
     }
 
 }

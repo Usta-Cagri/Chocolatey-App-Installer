@@ -18,22 +18,27 @@ However, I’m very open to feedback, suggestions, and contributions! If you fin
 ---
 
 ## How to Use
-1. Ensure that Chocolatey is installed on your system.
-2. Open an elevated Powershell window.
-3. Run the code "Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass".
-4. Go to the location of **.ps1** file and run ".\Chocolatey-App-Installer.ps1" command.
-5. Choose a number and follow the instructions.
-6. Or you can easily type: 
-```Set-ExecutionPolicy Bypass -Scope Process -Force; irm https://raw.githubusercontent.com/Usta-Cagri/Chocolatey-App-Installer/main/Chocolatey-App-Installer.ps1 | iex ```
+1. You can easily type: 
+```Set-ExecutionPolicy Bypass -Scope Process -Force; irm https://raw.githubusercontent.com/Usta-Cagri/CAI-Starter.ps1/main/Chocolatey-App-Installer.ps1 | iex ```
 on an elevated powershell window if you've installed chocolatey package manager but soon this script will automate that. (This is the recommended way because it doesn't install anything to your disk and if you have a bit of terminal knowledge you can add this to you $PROFILE folder) 
+2. Just pick a number and follow the instructions.
 
 ---
 
 ## Features
 - **Install recommended apps:** Downloads a predefined list of applications in bulk.
-- **Install Gaming Stuff** Downloads a predefined list of gaming stuff in bulk.
+- **Install Gaming Stuff:** Downloads a predefined list of gaming stuff in bulk.
 - **Update all applications:** Keeps all your installed apps up-to-date.
-- **Install a single app:** Allows the user to specify an app for installation.
+- **Install a single app:** Allows the user to specify an app for installation.(you can look to names of the packages from [here](https://community.chocolatey.org/packages))
+
+---
+
+##Info About the Predefined Lists
+-**Install predefined apps** function installs VS-Codium,(which is vscode but open-source) Firefox and Onlyoffice.
+-**Install gaming stuff** function installs Steam, EA-App, Ubisoft Connect, Heroic-Games-Launcher(a better alternative for Epic Games Launcher and GOG you don't have to buy the games if you own them since it uses your Epic Games or GOG account and personally I think it is a better launcher) and MSI Afterburner.
+
+-**Dipnote**
+Please make an entry to the issues page if you have any recommendations or issues about the predefined apps.
 
 ---
 

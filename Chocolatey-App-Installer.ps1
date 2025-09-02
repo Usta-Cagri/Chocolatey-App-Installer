@@ -20,23 +20,36 @@ function Install-RecommendedApps {
         }
  }
     else {
-        Write-Host "Apps are not going to be installed!(if you didn't meant to do this it is an error else it is not an error!)"
+        Write-Host "Apps are not going to be installed!"
+        
+        # Restart the script in a new PowerShell window
         $scriptPath = $PSCommandPath
+        if ($scriptPath) {
+            try {
+                if (Get-Command pwsh -ErrorAction SilentlyContinue) {
+                    # PowerShell 7
+                    Start-Process pwsh -ArgumentList "-NoExit", "-File `"$scriptPath`""
+                } else {
+                    # Windows PowerShell 5.1
+                    Start-Process powershell -ArgumentList "-NoExit", "-File `"$scriptPath`""
+                }
+            } catch {
+                Write-Error "Error starting new PowerShell window: $_"
+            }
+        } else {
+            Write-Host "Script path not found. Cannot restart."
+        }
 
-        if (Get-Command pwsh -ErrorAction SilentlyContinue) {
-        # PowerShell 7
-            Start-Process pwsh -ArgumentList "-File `"$scriptPath`""
-      } 
-        else {
-        # PowerShell 5.1
-            Start-Process powershell -ArgumentList "-File `"$scriptPath`""
+        # Exit current script
+        exit   
     }
 
+    
     # Stop Current Procces 
-    Stop-Process -Id $PID
+    exit
     }
 
-}
+
 
 function Update-ChocoApps {
     Write-Output "Chocolatey Apps are Updating, Be Patient..."
